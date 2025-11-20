@@ -1,8 +1,16 @@
 package com.example.my_spring_app.models;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class ScriptRequest {
+    
+    @NotBlank(message = "Topic is required")
     private String topic;
+    
+    @NotBlank(message = "Duration is required")
     private String duration;
+    
+    @NotBlank(message = "Tone is required")
     private String tone;
 
     // Constructors
